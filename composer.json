@@ -1,0 +1,29 @@
+{
+    "name": "yaroslawww/nova-response-dynamic-modal",
+    "description": "A Laravel Nova dynamic modal response.",
+    "keywords": [
+        "laravel-nova",
+        "response-modal"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NovaResponseDynamicModal\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NovaResponseDynamicModal\\AssetServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

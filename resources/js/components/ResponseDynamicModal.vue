@@ -1,44 +1,40 @@
 <template>
-  <modal
-    tabindex="-1"
-    role="dialog"
-    :closes-via-backdrop="true"
-    @modal-close="handleClose"
+  <Modal
+    data-testid="nova-response-dynamic-modal"
+    :show="true"
+    role="alertdialog"
+    size="sm"
   >
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden w-action-fields">
-      <heading
-        :level="2"
-        class="border-b border-40 py-8 px-8"
-      >
-        {{ data.title }}
-      </heading>
-
-      <p
-        v-if="data.message"
-        class="text-80 px-8 my-8"
-        v-html="data.message"
-      />
-      <div class="bg-30 px-6 py-3 flex">
-        <div class="flex items-center ml-auto">
-          <button
+    <div
+      class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
+      style="width: 460px"
+    >
+      <ModalHeader v-text="data.title"/>
+      <ModalContent>
+        <p
+          v-if="data.message"
+          class="text-80 px-8 my-8"
+          v-html="data.message"
+        />
+      </ModalContent>
+      <ModalFooter>
+        <div class="ml-auto">
+          <OutlineButton
             v-if="data.copy"
-            type="button"
-            class="btn btn-default btn-danger mr-2"
             @click.prevent="handleCopy(data.copy)"
+            class="mr-3"
           >
             {{ data.buttonCopyText || 'Copy to clipboard' }}
-          </button>
-          <button
-            type="button"
-            class="btn btn-default btn-primary"
+          </OutlineButton>
+          <DefaultButton
             @click.prevent="handleClose"
           >
             {{ data.buttonText || 'OK' }}
-          </button>
+          </DefaultButton>
         </div>
-      </div>
+      </ModalFooter>
     </div>
-  </modal>
+  </Modal>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 import ResponseDynamicModal from './components/ResponseDynamicModal';
 
-Nova.booting((Vue) => {
-  Vue.component('response-dynamic-modal', ResponseDynamicModal);
+Nova.booting(app => {
+  app.component('response-dynamic-modal', ResponseDynamicModal);
 });

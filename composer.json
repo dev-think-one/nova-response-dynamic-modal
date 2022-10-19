@@ -6,18 +6,51 @@
         "response-modal"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaroslav Georgitsa",
+            "email": "yaroslav.georgitsa@gmail.com",
+            "homepage": "https://github.com/yaroslawww",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "require": {
-        "php": ">=8.0"
+        "php": "^8.1",
+        "laravel/nova": "^4.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.12",
+        "orchestra/testbench": "^7.6",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-laravel": "^2.0",
+        "vimeo/psalm": "^4.24"
     },
     "autoload": {
         "psr-4": {
             "NovaResponseDynamicModal\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "NovaResponseDynamicModal\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --colors=always --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "NovaResponseDynamicModal\\AssetServiceProvider"
+                "NovaResponseDynamicModal\\ServiceProvider"
             ]
         }
     },

@@ -1,15 +1,16 @@
 {
-    "name": "yaroslawww/nova-response-dynamic-modal",
+    "name": "think.studio/nova-response-dynamic-modal",
     "description": "A Laravel Nova dynamic modal response.",
     "keywords": [
         "laravel-nova",
         "response-modal"
     ],
+    "homepage": "https://github.com/dev-think-one/nova-response-dynamic-modal",
     "license": "MIT",
     "authors": [
         {
             "name": "Yaroslav Georgitsa",
-            "email": "yaroslav.georgitsa@gmail.com",
+            "email": "yg@think.studio",
             "homepage": "https://github.com/yaroslawww",
             "role": "Developer"
         }

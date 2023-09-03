@@ -1,13 +1,15 @@
 /.idea
 /vendor
-/build
 /node_modules
+/build
+/coverage
 package-lock.json
 yarn.lock
 composer.phar
 composer.lock
 phpunit.xml
-.phpunit.result.cache
+/.phpunit.result.cache
+/.phpunit.cache
 .DS_Store
 Thumbs.db
 /.php-cs-fixer.cache
